@@ -141,6 +141,7 @@ export const ViewUserModalContent = (props: IProps) => {
                 email: user.email ?? undefined,
                 hwidDeviceLimit: user.hwidDeviceLimit ?? undefined,
                 tag: user.tag ?? undefined,
+                routingTags: user.routingTags ?? [],
                 externalSquadUuid: user.externalSquadUuid ?? undefined
             })
         }
@@ -177,6 +178,7 @@ export const ViewUserModalContent = (props: IProps) => {
                 hwidDeviceLimit: values.hwidDeviceLimit === '' ? null : values.hwidDeviceLimit,
                 // eslint-disable-next-line no-nested-ternary
                 tag: touchedFields.tag ? (values.tag === '' ? null : values.tag) : undefined,
+                routingTags: touchedFields.routingTags ? values.routingTags : undefined,
                 externalSquadUuid: touchedFields.externalSquadUuid
                     ? values.externalSquadUuid
                     : undefined

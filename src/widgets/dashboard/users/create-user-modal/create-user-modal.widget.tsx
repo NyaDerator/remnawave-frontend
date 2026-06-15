@@ -107,6 +107,7 @@ export const CreateUserModalWidget = () => {
             email: undefined,
             hwidDeviceLimit: undefined,
             tag: undefined,
+            routingTags: [],
             activeInternalSquads: []
         }
     })
@@ -135,6 +136,7 @@ export const CreateUserModalWidget = () => {
                     // @ts-expect-error - TODO: fix ZOD schema
                     hwidDeviceLimit: values.hwidDeviceLimit === '' ? null : values.hwidDeviceLimit,
                     tag: values.tag,
+                    routingTags: values.routingTags,
                     activeInternalSquads: values.activeInternalSquads,
                     externalSquadUuid: values.externalSquadUuid
                 }

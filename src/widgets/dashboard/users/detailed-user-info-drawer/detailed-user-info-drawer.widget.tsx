@@ -155,6 +155,11 @@ export const DetailedUserInfoDrawerWidget = () => {
                                     label={t('detailed-user-info-drawer.widget.tag')}
                                     value={user.tag || '—'}
                                 />
+
+                                <CopyableFieldShared
+                                    label="Routing tags"
+                                    value={user.routingTags?.join(', ') || '—'}
+                                />
                             </Stack>
                         </SectionCardSection>
                     </SectionCardRoot>

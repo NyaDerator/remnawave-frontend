@@ -10,6 +10,7 @@ import { Trans, useTranslation } from 'react-i18next'
 import { UseFormReturnType } from '@mantine/form'
 
 import { CreateableTagInputShared } from '@shared/ui/createable-tag-input/createable-tag-input'
+import { UserRoutingTagsInputShared } from '@shared/ui/user-routing-tags-input/user-routing-tags-input'
 import { BaseOverlayHeader } from '@shared/ui/overlays/base-overlay-header'
 import { SectionCard } from '@shared/ui/section-card'
 
@@ -100,6 +101,12 @@ export function DeviceTagSettingsCard<
                             {...form.getInputProps('tag')}
                             tags={tags?.tags ?? []}
                             value={form.getValues().tag}
+                        />
+
+                        <UserRoutingTagsInputShared
+                            key={form.key('routingTags')}
+                            {...form.getInputProps('routingTags')}
+                            value={form.getValues().routingTags}
                         />
 
                         <Textarea
